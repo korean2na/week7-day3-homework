@@ -9,29 +9,29 @@ function showStandings() {
     }
 
     const keyRowEl = document.createElement('div')
-    keyRowEl.classList.add('card', 'mx-5', 'ps-4','pt-2', 'bg-primary', 'text-white')
+    keyRowEl.classList.add('card', 'mx-5', 'pt-2', 'bg-primary', 'text-white')
 
     keyRowEl.innerHTML = `
         <div class="card-body row justify-content-between">
-            <div class="col-1">
+            <div class="col-1 text-center">
                 <p><strong>Position</strong></p>
             </div>
             <div class="col-3">
                 <p><strong>Name</strong></p>
             </div>
-            <div class="col-1">
+            <div class="col-1 text-center">
                 <p><strong>Number</strong></p>
             </div>
-            <div class="col-2">
+            <div class="col-2 text-center">
                 <p><strong>Nationality</strong></p>
             </div>
-            <div class="col-2">
+            <div class="col-2 text-center">
                 <p><strong>Sponsor</strong></p>
             </div>
-            <div class="col-1">
+            <div class="col-1 text-center">
                 <p><strong>Points</strong></p>
             </div>
-            <div class="col-1">
+            <div class="col-1 text-center">
                 <p><strong>Wins</strong></p>
             </div>
         </div>
@@ -40,27 +40,27 @@ function showStandings() {
 
     for (i=0; i<7; i++) {
         const currStanding = `
-            <div class="card mx-5 ps-4 pt-2">
+            <div class="card mx-5 pt-2">
                 <div class="card-body row justify-content-between">
-                    <div class="col-1">
+                    <div class="col-1 text-center">
                         <p>${standings[i].position}</p>
                     </div>
                     <div class="col-3">
                         <p><a href="${standings[i].Driver.url}" target="_blank">${standings[i].Driver.givenName} ${standings[i].Driver.familyName}</a></p>
                     </div>
-                    <div class="col-1">
+                    <div class="col-1 text-center">
                         <p>${standings[i].Driver.permanentNumber}</p>
                     </div>
-                    <div class="col-2">
+                    <div class="col-2 text-center">
                         <p>${standings[i].Driver.nationality}</p>
                     </div>
-                    <div class="col-2">
+                    <div class="col-2 text-center">
                         <p><a href="${standings[i].Constructors[0].url}" target="_blank">${standings[i].Constructors[0].name}</a></p>
                     </div>
-                    <div class="col-1">
+                    <div class="col-1 text-center">
                         <p>${standings[i].points}</p>
                     </div>
-                    <div class="col-1">
+                    <div class="col-1 text-center">
                         <p>${standings[i].wins}</p>
                     </div>
                 </div>
